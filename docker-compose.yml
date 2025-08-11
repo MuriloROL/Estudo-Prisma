@@ -1,0 +1,17 @@
+version: '3.5'
+
+services:
+  postgres:
+    image: postgres
+    container_name: estudo-prisma
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: estudo-prisma
+    ports:
+      - "5433:5432"
+    volumes:
+      - data:/var/lib/postgresql/data
+
+volumes:
+  data:
